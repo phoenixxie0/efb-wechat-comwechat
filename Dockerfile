@@ -22,4 +22,4 @@ RUN set -ex \
         && apk del .build-deps \
         && rm -rf ~/.cache 
         
-CMD ["ehforwarderbot -v"]
+CMD ["ehforwarderbot","-v"]
