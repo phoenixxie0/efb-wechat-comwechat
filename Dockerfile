@@ -16,6 +16,7 @@ RUN set -ex \
         && pip3 install git+https://github.com/ehForwarderBot/efb-telegram-master \
         && pip3 install git+https://github.com/0honus0/python-CuteCat-iHttp.git@1.1.9.12 \
         && pip3 install git+https://github.com/0honus0/efb-wechat-cutecat-slave.git@1.1.9.12 \
+        && sed -i 's/channel_emoji: str = "📱"/channel_emoji: str = "𝙒𝙚𝙘𝙝𝙖𝙩"/g' /usr/local/lib/python3.*/site-packages/efb_wechat_cutecat_slave/__init__.py \
         && pip3 install git+https://github.com/ehForwarderBot/efb-link_preview-middleware \
         && pip3 install python-telegram-bot[socks] \
         && apk del .build-deps \
