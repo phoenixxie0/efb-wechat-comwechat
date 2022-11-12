@@ -11,15 +11,15 @@ RUN set -ex \
         && echo "Asia/Shanghai" > /etc/timezone
 
 RUN set -ex \
-        && pip3 install --upgrade setuptools \
         && pip3 install lottie \
         && pip3 install cairosvg \
         && pip3 install git+https://github.com/ehForwarderBot/ehForwarderBot \
         && pip3 install git+https://github.com/ehForwarderBot/efb-telegram-master \
-        && pip3 install git+https://github.com/0honus0/python-CuteCat-iHttp.git@1.1.9.12 \
-        && pip3 install git+https://github.com/0honus0/efb-wechat-cutecat-slave.git@1.1.9.12 \
-        && sed -i 's/channel_emoji: str = "📱"/channel_emoji: str = "𝙒𝙚𝙘𝙝𝙖𝙩"/g' /usr/local/lib/python3.*/site-packages/efb_wechat_cutecat_slave/__init__.py \
+        && pip3 install git+https://github.com/0honus0/python-comwechatrobot-http \
+        && pip3 install git+https://github.com/0honus0/efb-wechat-comwechat-slave \
+        && sed -i 's/channel_emoji: str = "💻"/channel_emoji: str = "𝙒𝙚𝙘𝙝𝙖𝙩"/g' /usr/local/lib/python3.*/site-packages/efb_wechat_comwechat_slave/ComWechat.py \
         && pip3 install git+https://github.com/ehForwarderBot/efb-link_preview-middleware \
+        && pip3 install git+https://github.com/ahxxm/efb-filter-middleware \
         && pip3 install python-telegram-bot[socks] \
         && apk del .build-deps \
         && rm -rf ~/.cache 
