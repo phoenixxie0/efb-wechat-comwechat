@@ -1,4 +1,4 @@
-FROM python:3.8.13-alpine3.14
+FROM python:3.8.13-alpine3.16
 MAINTAINER Phoenix <hkxseven007@gmail.com>
 
 ENV LANG C.UTF-8
@@ -24,4 +24,4 @@ RUN set -ex \
         && apk del .build-deps \
         && rm -rf ~/.cache 
         
-CMD ["ehforwarderbot","-v"]
+CMD ["ehforwarderbot"]
