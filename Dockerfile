@@ -17,9 +17,10 @@ RUN set -ex \
         && pip3 install git+https://github.com/ehForwarderBot/efb-telegram-master \
         && pip3 install git+https://github.com/0honus0/python-comwechatrobot-http \
         && pip3 install git+https://github.com/0honus0/efb-wechat-comwechat-slave \
-        && sed -i 's/channel_emoji: str = "💻"/channel_emoji: str = "𝙒𝙚𝙘𝙝𝙖𝙩"/g' /usr/local/lib/python3.*/site-packages/efb_wechat_comwechat_slave/ComWechat.py \
+        && sed -i 's/💻/𝙒𝙚𝙘𝙝𝙖𝙩/g' /usr/local/lib/python3.*/site-packages/efb_wechat_comwechat_slave/ComWechat.py \
         && pip3 install git+https://github.com/ehForwarderBot/efb-link_preview-middleware \
         && pip3 install git+https://github.com/ahxxm/efb-filter-middleware \
+        && pip3 install git+https://github.com/QQ-War/efb_message_merge \
         && pip3 install python-telegram-bot[socks] \
         && apk del .build-deps \
         && rm -rf ~/.cache 
