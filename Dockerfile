@@ -21,6 +21,7 @@ RUN set -ex \
         ## && pip3 install git+https://github.com/ehForwarderBot/efb-link_preview-middleware \
         ## && pip3 install git+https://github.com/ahxxm/efb-filter-middleware \
         && pip3 install git+https://github.com/QQ-War/efb_message_merge \
+        && pip3 install git+https://github.com/QQ-War/efb-keyword-reply.git \
         && pip3 install python-telegram-bot[socks] \
         && apk del .build-deps \
         && rm -rf ~/.cache 
