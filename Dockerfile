@@ -23,7 +23,7 @@ RUN set -ex \
         && pip3 install git+https://github.com/QQ-War/efb_message_merge \
         && pip3 install git+https://github.com/QQ-War/efb-keyword-reply.git \
         && pip3 install python-telegram-bot[socks] \
-        && pip3 install pydantic==1.10.13 \
+        ##&& pip3 install pydantic==1.10.13 \
         && apk del .build-deps \
         && rm -rf ~/.cache 
         
