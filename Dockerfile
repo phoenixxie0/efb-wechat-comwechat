@@ -8,9 +8,7 @@ RUN set -ex \
         && apk add --no-cache --virtual .build-deps sed build-base libffi-dev openssl-dev git \
         && apk add --no-cache tzdata ca-certificates ffmpeg libmagic openjpeg zlib-dev libwebp cairo \
         && ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
-        && echo "Asia/Shanghai" > /etc/timezone
-
-RUN set -ex \
+        && echo "Asia/Shanghai" > /etc/timezone \
         && pip3 install lottie \
         && pip3 install cairosvg \
         && pip3 install git+https://github.com/ehForwarderBot/ehForwarderBot \
