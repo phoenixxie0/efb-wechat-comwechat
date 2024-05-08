@@ -11,6 +11,7 @@ RUN set -ex \
         && echo "Asia/Shanghai" > /etc/timezone \
         && pip3 install lottie \
         && pip3 install cairosvg \
+        && pip3 install urllib3==1.26.15 \
         && pip3 install git+https://github.com/ehForwarderBot/ehForwarderBot \
         && pip3 install git+https://github.com/ehForwarderBot/efb-telegram-master \
         && pip3 install git+https://github.com/0honus0/python-comwechatrobot-http \
@@ -21,7 +22,7 @@ RUN set -ex \
         && pip3 install git+https://github.com/QQ-War/efb_message_merge \
         && pip3 install git+https://github.com/QQ-War/efb-keyword-reply.git \
         && pip3 install python-telegram-bot[socks] \
-        ##&& pip3 install pydantic==1.10.13 \
+        ## && pip3 install pydantic==1.10.13 \
         && apk del .build-deps \
         && rm -rf ~/.cache 
         
