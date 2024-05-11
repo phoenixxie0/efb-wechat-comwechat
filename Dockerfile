@@ -11,14 +11,14 @@ RUN set -ex \
         && echo "Asia/Shanghai" > /etc/timezone \
         && pip3 install lottie \
         && pip3 install cairosvg \
-        && pip3 install urllib3==1.26.15 \
+        ## && pip3 install urllib3==1.26.15 \
         && pip3 install git+https://github.com/ehForwarderBot/ehForwarderBot \
         && pip3 install git+https://github.com/ehForwarderBot/efb-telegram-master \
         && pip3 install git+https://github.com/0honus0/python-comwechatrobot-http \
         && pip3 install git+https://github.com/0honus0/efb-wechat-comwechat-slave \
         && sed -i 's/💻/𝙒𝙚𝙘𝙝𝙖𝙩/g' /usr/local/lib/python3.*/site-packages/efb_wechat_comwechat_slave/ComWechat.py \
         ## && pip3 install git+https://github.com/ehForwarderBot/efb-link_preview-middleware \
-        ## && pip3 install git+https://github.com/ahxxm/efb-filter-middleware \
+        && pip3 install git+https://github.com/phoenixxie0/efb-filter-middleware \
         && pip3 install git+https://github.com/QQ-War/efb_message_merge \
         && pip3 install git+https://github.com/QQ-War/efb-keyword-reply.git \
         && pip3 install python-telegram-bot[socks] \
