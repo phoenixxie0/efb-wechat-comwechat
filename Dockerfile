@@ -6,7 +6,7 @@ ENV TZ 'Asia/Shanghai'
 
 RUN set -ex \
         && apk add --no-cache --virtual .build-deps sed build-base libffi-dev openssl-dev git \
-        && apk add --no-cache tzdata ca-certificates ffmpeg libmagic openjpeg zlib-dev libwebp cairo \
+        && apk add --no-cache tzdata ca-certificates ffmpeg libmagic openjpeg zlib-dev libwebp cairo zbar-dev \
         && ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
         && echo "Asia/Shanghai" > /etc/timezone \
         && pip3 install lottie \
@@ -15,7 +15,8 @@ RUN set -ex \
         && pip3 install git+https://github.com/ehForwarderBot/ehForwarderBot \
         && pip3 install git+https://github.com/ehForwarderBot/efb-telegram-master \
         && pip3 install git+https://github.com/0honus0/python-comwechatrobot-http \
-        && pip3 install git+https://github.com/0honus0/efb-wechat-comwechat-slave.git@7bc64ef9d954b3e8ae289f16fd52213742a29acf \
+        ##&& pip3 install git+https://github.com/0honus0/efb-wechat-comwechat-slave.git@7bc64ef9d954b3e8ae289f16fd52213742a29acf \
+        && pip3 install git+https://github.com/0honus0/efb-wechat-comwechat-slave.git \
         && sed -i 's/💻/𝙒𝙚𝙘𝙝𝙖𝙩/g' /usr/local/lib/python3.*/site-packages/efb_wechat_comwechat_slave/ComWechat.py \
         ## && pip3 install git+https://github.com/ehForwarderBot/efb-link_preview-middleware \
         && pip3 install git+https://github.com/phoenixxie0/efb-filter-middleware \
