@@ -13,16 +13,13 @@ RUN set -ex \
         && pip3 install cairosvg \
         ## && pip3 install urllib3==1.26.15 \
         && pip3 install git+https://github.com/ehForwarderBot/ehForwarderBot \
-        && pip3 install git+https://github.com/ehForwarderBot/efb-telegram-master \
+        #&& pip3 install git+https://github.com/ehForwarderBot/efb-telegram-master \
+        && pip3 install git+https://github.com/jiz4oh/efb-telegram-master.git \
         && pip3 install git+https://github.com/0honus0/python-comwechatrobot-http \
         ##&& pip3 install git+https://github.com/0honus0/efb-wechat-comwechat-slave.git@7bc64ef9d954b3e8ae289f16fd52213742a29acf \
         && pip3 install git+https://github.com/0honus0/efb-wechat-comwechat-slave.git \
         && sed -i 's/💻/𝙒𝙚𝙘𝙝𝙖𝙩/g' /usr/local/lib/python3.*/site-packages/efb_wechat_comwechat_slave/ComWechat.py \
-        && sed -i '9i original_find_library = find_library' /usr/local/lib/python3.10/site-packages/pyzbar/zbar_library.py \
-        && sed -i '10i def find_library(name):' /usr/local/lib/python3.10/site-packages/pyzbar/zbar_library.py \
-        && sed -i '11i \ \ \ \ if name == '"'"'zbar'"'"':' /usr/local/lib/python3.10/site-packages/pyzbar/zbar_library.py \
-        && sed -i '12i \ \ \ \ \ \ \ \ return '"'"'/usr/lib/libzbar.so.0'"'"'' /usr/local/lib/python3.10/site-packages/pyzbar/zbar_library.py \
-        && sed -i '13i \ \ \ \ return original_find_library(name)' /usr/local/lib/python3.10/site-packages/pyzbar/zbar_library.py \
+        && sed -i "s|path = find_library('zbar')|path = '/usr/lib/libzbar.so.0' # find_library('zbar')|" /usr/local/lib/python3.*/site-packages/pyzbar/zbar_library.py \
         && pip3 install git+https://github.com/phoenixxie0/efb-filter-middleware \
         && pip3 install git+https://github.com/QQ-War/efb_message_merge \
         && pip3 install git+https://github.com/QQ-War/efb-keyword-reply.git \
