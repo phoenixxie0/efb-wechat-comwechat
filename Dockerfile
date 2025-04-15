@@ -13,8 +13,8 @@ RUN set -ex \
         && pip3 install cairosvg \
         ## && pip3 install urllib3==1.26.15 \
         && pip3 install git+https://github.com/ehForwarderBot/ehForwarderBot \
-        #&& pip3 install git+https://github.com/ehForwarderBot/efb-telegram-master \
-        && pip3 install git+https://github.com/jiz4oh/efb-telegram-master.git \
+        && pip3 install git+https://github.com/ehForwarderBot/efb-telegram-master \
+        #&& pip3 install git+https://github.com/jiz4oh/efb-telegram-master \
         && pip3 install git+https://github.com/0honus0/python-comwechatrobot-http \
         ##&& pip3 install git+https://github.com/0honus0/efb-wechat-comwechat-slave.git@7bc64ef9d954b3e8ae289f16fd52213742a29acf \
         && pip3 install git+https://github.com/0honus0/efb-wechat-comwechat-slave.git \
