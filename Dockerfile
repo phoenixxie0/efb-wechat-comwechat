@@ -17,7 +17,7 @@ RUN set -ex \
         #&& pip3 install git+https://github.com/jiz4oh/efb-telegram-master \
         && pip3 install git+https://github.com/0honus0/python-comwechatrobot-http \
         ##&& pip3 install git+https://github.com/0honus0/efb-wechat-comwechat-slave.git@7bc64ef9d954b3e8ae289f16fd52213742a29acf \
-        && pip3 install git+https://github.com/0honus0/efb-wechat-comwechat-slave.git \
+        && pip3 install git+https://github.com/ehForwarderBot/efb-wechat-comwechat-slave \
         && sed -i 's/💻/𝙒𝙚𝙘𝙝𝙖𝙩/g' /usr/local/lib/python3.*/site-packages/efb_wechat_comwechat_slave/ComWechat.py \
         && sed -i "s|path = find_library('zbar')|path = '/usr/lib/libzbar.so.0' # find_library('zbar')|" /usr/local/lib/python3.*/site-packages/pyzbar/zbar_library.py \
         && pip3 install git+https://github.com/phoenixxie0/efb-filter-middleware \
