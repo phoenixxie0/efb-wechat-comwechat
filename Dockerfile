@@ -11,7 +11,7 @@ RUN set -ex \
         && echo "Asia/Shanghai" > /etc/timezone \
         && pip3 install lottie pyqrcode rich pyzbar \
         && pip3 install cairosvg \
-        ## && pip3 install urllib3==1.26.15 \
+        && pip3 install urllib3==1.26.15 \
         && pip3 install git+https://github.com/ehForwarderBot/ehForwarderBot \
         && pip3 install git+https://github.com/ehForwarderBot/efb-telegram-master \
         #&& pip3 install git+https://github.com/jiz4oh/efb-telegram-master \
