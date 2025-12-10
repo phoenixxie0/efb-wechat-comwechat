@@ -12,7 +12,7 @@ RUN set -ex \
         && pip3 install lottie \
         && pip3 install cairosvg \
         && pip3 install urllib3==1.26.15 \
-        && pip3 install ehforwarderbot python-telegram-bot \
+        && pip3 install ehforwarderbot efb-telegram-master \
         ##&& pip3 install git+https://github.com/ehForwarderBot/ehForwarderBot \
         ##&& pip3 install git+https://github.com/ehForwarderBot/efb-telegram-master \
         ##&& pip3 install git+https://github.com/jiz4oh/efb-telegram-master \
